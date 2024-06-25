@@ -1,0 +1,93 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.6.0.0",
+    "parameters": {
+        "appServicePlanName": {
+            "type": "string",
+            "metadata": {
+                "group": "App Service Plan Settings",
+                "description": "The name of the Service Plan that will be deployed to support your Web App."
+            }
+        },
+        "appServicePlanSku": {
+            "type": "string",
+            "defaultValue": "S1",
+            "allowedValues": [
+                "B1",
+                "B2",
+                "B3",
+                "S1",
+                "S2",
+                "S3",
+                "P1V2",
+                "P2V2",
+                "P3V2",
+                "P1V3",
+                "P2V3",
+                "P3V3"
+            ],
+            "metadata": {
+                "group": "App Service Plan Settings",
+                "description": "The SKU of App Service Plan "
+            }
+        },
+        "webAppName": {
+            "type": "string",
+            "metadata": {
+                "group": "Web App Settings",
+                "description": "Please provide a name for your WebApp instance."
+            },
+            "minLength": 2
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().location]",
+            "metadata": {
+                "group": "Web App Settings",
+                "description": "Location for all resources."
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "apiVersion": "2018-02-01",
+            "type": "Microsoft.Web/serverfarms",
+            "kind": "app",
+            "name": "[parameters('appServicePlanName')]",
+            "location": "[parameters('location')]",
+            "properties": {},
+            "dependsOn": [],
+            "sku": {
+                "name": "[parameters('appServicePlanSku')]"
+            }
+        },
+        {
+            "apiVersion": "2018-02-01",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('webAppName')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]",
+                "httpsOnly": true,
+                "siteConfig": {
+                    "logsDirectorySizeLimit": 35,
+                    "webSocketsEnabled": false,
+                    "requestTracingEnabled": true,
+                    "httpLoggingEnabled": true,
+                    "detailedErrorLoggingEnabled": true,
+                    "remoteDebuggingEnabled": false,
+                    "minTlsVersion": "1.2",
+                    "siteAuthEnabled": true
+                }
+            },
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]"
+            ]
+        }
+    ]
+}

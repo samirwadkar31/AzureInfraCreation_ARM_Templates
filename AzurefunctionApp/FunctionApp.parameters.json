@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appServicePlanName": {
+            "value": "jv-test-003" 
+        },
+        "appServicePlanSku": {
+            "value": "P1V2"
+        },
+        "functionAppName": {
+            "value": "jv-fun-003" 
+        },
+        "storageAccountName": {
+            "value": "jvstacc003" 
+        },
+        "location": {
+            "value": "West Europe" 
+        },
+        "runtime": {
+            "value": "dotnet"
+        },
+        "storageAccountSku": {
+            "value": "Standard_LRS"
+        }
+    }
+}
