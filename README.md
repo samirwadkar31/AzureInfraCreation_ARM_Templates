@@ -1,6 +1,6 @@
 # ARM-Templates
 
-We can create AZURE Infrastructure using ARM templates. (IAC)
+We can create AZURE Infrastructure using ARM templates.(IAC) <br>
 Ways to create Azure Infra using ARM teamplates,
 1) Azure DevOps CICD Pipelines
 2) Azure Custom Templates Deployment
