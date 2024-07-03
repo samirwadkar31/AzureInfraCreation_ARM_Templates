@@ -7,7 +7,7 @@ Ways to create Azure Infra using ARM teamplates,
 3) Azure CLI 
 4) VS Code 
 
-1) Azure DevOps CICD Pipelines
+    ## 1) Azure DevOps CICD Pipelines
    
 Initially resource group was empty. 
 ![image](https://github.com/samirwadkar31/ARM-Templates/assets/74359548/03996c10-bbee-45d4-859f-897b4a36ba6a)
