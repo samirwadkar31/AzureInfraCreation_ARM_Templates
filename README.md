@@ -62,13 +62,20 @@ Aftre executing above azure cli command, your resource will be created in target
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/7369bdf1-ab44-4da3-8c78-f986a91c2162)
 
    ## 4) VS Code
+   
 First download & install azure cli to your local machine. Login to your azure tenant where you need create the azure resource.
 
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/62a63616-18ed-42d9-b7ae-fb472bef2c31)
 
+Use below azure cli command to create azure storage account in DevOpsHandsOn resource group.
+
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/7716f29d-df5a-4b07-af49-39f2d7404acb)
 
+Deployment is succeeded!!
+
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/30c3be16-5b90-4eb1-81f6-a5b8c90b5f6b)
+
+Resource has been created in target resource group.
 
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/19449734-d12b-4313-8628-4105e720a277)
 
