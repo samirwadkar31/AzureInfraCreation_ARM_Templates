@@ -51,5 +51,13 @@ After successfuly deployment, you can use your azure resource!!
 
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/bef31ce1-1d1c-43f9-839f-3a1980ab1a4f)
 
+   ## 3) Azure CLI
 
+Go to your azure tenant. Log in with the subscription where you want to create the resources. Open the cloud shell terminal. Upload your template and parameter.json file
+
+![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/381602e4-2d08-4296-9f29-ba868d239f4a)
+
+Aftre executing above azure cli command, your resource will be created in target resource group.
+
+![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/7369bdf1-ab44-4da3-8c78-f986a91c2162)
 
