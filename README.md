@@ -41,7 +41,7 @@ Load template.json & Parameter.json files from your local machine
 
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/eb03e491-511e-4abd-b6bb-ecf0af989bdf)
 
-Click Save & create
+Click Review & create
 
 ![image](https://github.com/samirwadkar31/AzureInfraCreation_ARM_Templates/assets/74359548/41d85a0e-83bd-4268-85c1-244c790e18d1)
 
